@@ -29,6 +29,12 @@ await page.evaluate(() => window.__shim.emulateSite('leetgpu.com', { sites: {} }
 await page.waitForFunction(() => window.__harnessReady === true);
 await page.waitForSelector('.monaco-vim-keys-status');
 
+// Fill the viewport with the editor so shots have no dead space.
+await page.addStyleTag({
+  content: '#editor-container { left: 0 !important; top: 0 !important; width: 100vw !important; height: 100vh !important; }',
+});
+await page.waitForTimeout(400);
+
 // Shot 1: NORMAL mode, indicator visible.
 await page.evaluate(() => {
   window.editor.focus();

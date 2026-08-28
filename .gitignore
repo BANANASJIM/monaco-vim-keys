@@ -4,3 +4,4 @@ web-ext-artifacts/
 test-results/
 playwright-report/
 tests/harness/shim.js
+.amo-creds.env
