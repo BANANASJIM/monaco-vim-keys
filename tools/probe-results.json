@@ -1,0 +1,65 @@
+{
+  "date": "2026-08-27T14:21:25.222Z",
+  "results": [
+    {
+      "id": "leetcode.com",
+      "url": "https://leetcode.com/problems/two-sum/",
+      "httpStatus": 200,
+      "title": "Two Sum - LeetCode",
+      "monacoGlobal": true,
+      "monacoVersion": null,
+      "editorElements": 2,
+      "editors": 2,
+      "bodySnippet": "Problem List\nDebugging...\nSubmit\n00:00:00\nRegister\nor\nLog in\nPremium\nDescription\nEditorial\nEditorial\nSolutions\nSolutions\nSubmissions\nSubmissions\nCode\nTestcase\nTest Result\nTest Result\n1. Two Sum\nEasy\nT",
+      "verdict": "verified"
+    },
+    {
+      "id": "leetcode.cn",
+      "url": "https://leetcode.cn/problems/two-sum/",
+      "httpStatus": 200,
+      "title": "1. 两数之和 - 力扣（LeetCode）",
+      "monacoGlobal": true,
+      "monacoVersion": null,
+      "editorElements": 1,
+      "editors": 1,
+      "bodySnippet": "调试中...\n提交\n00:00:00\n注册\n或\n登录\nPlus 会员\n题目描述\n题解\n题解\n提交记录\n提交记录\n代码\n测试用例\n测试结果\n测试结果\n1. 两数之和\n简单\n相关标签\n相关企业\n提示\n\n给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。\n\n你可以假设每种输入只会对应一个答案，并且你不能使用",
+      "verdict": "verified"
+    },
+    {
+      "id": "hackerrank.com",
+      "url": "https://www.hackerrank.com/challenges/solve-me-first/problem",
+      "httpStatus": 200,
+      "title": "Solve Me First | HackerRank",
+      "monacoGlobal": true,
+      "monacoVersion": null,
+      "editorElements": 1,
+      "editors": 1,
+      "bodySnippet": "We use cookies to ensure you have the best browsing experience on our website. Please read our cookie policy for more information about how we use cookies.\nOK\n|\nPrepare\nCertify\nCompete\nHiring develope",
+      "verdict": "verified"
+    },
+    {
+      "id": "app.codesignal.com",
+      "url": "https://app.codesignal.com/",
+      "httpStatus": 200,
+      "title": "CodeSignal",
+      "monacoGlobal": false,
+      "monacoVersion": null,
+      "editorElements": 0,
+      "editors": null,
+      "bodySnippet": "Sign in to continue\nEmail or username\nPassword\nForgot password?\nSign in\nOR\nContinue with Single Sign-On\nContinue with Apple\nContinue with Google\nContinue with Facebook\nContinue with Github\nDon't have ",
+      "verdict": "unverified"
+    },
+    {
+      "id": "lintcode.com",
+      "url": "https://www.lintcode.com/problem/1/",
+      "httpStatus": 200,
+      "title": "LintCode 炼码 - A more effective learning experience!",
+      "monacoGlobal": true,
+      "monacoVersion": null,
+      "editorElements": 2,
+      "editors": null,
+      "bodySnippet": "Search for problems,tags,collection\nENG\nLog in\nSign up\n1 · A + B Problem\nAlgorithms\nNaive\nAccepted Rate\n60%\nDescription\nSolution\n99+\nNotes\nDiscuss\n99+\nLeaderboard\nRecord\nDescription\n\nWrite a function ",
+      "verdict": "verified"
+    }
+  ]
+}

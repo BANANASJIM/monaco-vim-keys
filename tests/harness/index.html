@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>monaco-vim-keys test harness</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #151515; }
+    #editor-container { position: absolute; left: 20px; top: 20px; width: 900px; height: 560px; }
+  </style>
+</head>
+<body>
+  <div id="editor-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js"></script>
+  <script>
+    const SAMPLE = [
+      'import torch',
+      '',
+      '',
+      'def vector_add(a, b, out, n):',
+      '    # each thread handles one element',
+      '    idx = thread_idx()',
+      '    if idx < n:',
+      '        out[idx] = a[idx] + b[idx]',
+      '',
+      '',
+      'def main():',
+      '    n = 1024',
+      '    a = torch.randn(n, device="cuda")',
+      '    b = torch.randn(n, device="cuda")',
+      '    out = torch.empty(n, device="cuda")',
+      '    vector_add(a, b, out, n)',
+      '    expected = a + b',
+      '    assert torch.allclose(out, expected)',
+      '    print("ok")',
+      '',
+    ].join('\n');
+
+    require.config({
+      paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs' },
+    });
+
+    window.createEditor = function () {
+      window.editor = monaco.editor.create(document.getElementById('editor-container'), {
+        value: SAMPLE,
+        language: 'python',
+        theme: 'vs-dark',
+        automaticLayout: true,
+        minimap: { enabled: false },
+      });
+      return window.editor;
+    };
+
+    // Simulates an SPA re-render: dispose the editor (and its model), create a fresh one.
+    window.recreateEditor = function () {
+      monaco.editor.getEditors().slice().forEach((e) => e.dispose());
+      monaco.editor.getModels().slice().forEach((m) => m.dispose());
+      return window.createEditor();
+    };
+
+    require(['vs/editor/editor.main'], function () {
+      window.createEditor();
+      window.__monacoReady = true;
+      // Tests drive site emulation via window.__shim.emulateSite(hostname).
+      // The shim bundle also injects dist/page.js when the site is enabled.
+      const s = document.createElement('script');
+      s.src = '/tests/harness/shim.js';
+      s.onload = () => { window.__shimLoaded = true; };
+      document.head.appendChild(s);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+web-ext-artifacts/
+test-results/
+playwright-report/
+tests/harness/shim.js

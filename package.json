@@ -1,0 +1,45 @@
+{
+  "name": "monaco-vim-keys",
+  "version": "0.1.0",
+  "description": "Vim key bindings and relative line numbers for Monaco-based coding practice sites (LeetGPU, LeetCode, HackerRank, LintCode). Firefox extension powered by monaco-vim.",
+  "license": "MIT",
+  "author": "BANANASJIM",
+  "keywords": [
+    "firefox-addon",
+    "vim",
+    "monaco-editor",
+    "leetcode",
+    "leetgpu",
+    "hackerrank",
+    "browser-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BANANASJIM/monaco-vim-keys.git"
+  },
+  "bugs": "https://github.com/BANANASJIM/monaco-vim-keys/issues",
+  "homepage": "https://github.com/BANANASJIM/monaco-vim-keys",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "icons": "python3 tools/make_icons.py",
+    "probe": "node tools/probe.mjs",
+    "test": "npm run test:unit && playwright test",
+    "test:unit": "node --test \"tests/unit/**/*.test.mjs\"",
+    "test:firefox": "node tests/firefox-e2e.mjs",
+    "lint": "web-ext lint --source-dir dist"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "esbuild": "^0.28.2",
+    "geckodriver": "^6.1.1",
+    "monaco-vim": "^0.4.4",
+    "selenium-webdriver": "^4.47.0",
+    "web-ext": "^10.6.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "geckodriver@6.1.1": true
+  }
+}
