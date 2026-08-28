@@ -2,9 +2,11 @@
 // loadable extension directory. The manifest is generated here so the
 // content-script match patterns always come from the site registry.
 import * as esbuild from 'esbuild';
-import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, rm, writeFile, readFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import { manifestMatches } from './src/sites.js';
+
+const { version } = JSON.parse(await readFile('package.json', 'utf8'));
 
 await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
@@ -55,13 +57,13 @@ const matches = manifestMatches();
 const manifest = {
   manifest_version: 3,
   name: 'Monaco Vim Keys',
-  version: '1.0.0',
+  version,
   description:
     'Vim key bindings and relative line numbers for Monaco-editor practice sites (leetgpu, leetcode, hackerrank, ...). Unofficial.',
   permissions: ['storage'],
   browser_specific_settings: {
     gecko: {
-      id: 'monaco-vim-keys@example.com',
+      id: 'monaco-vim-keys@bananasjim.github.io',
       strict_min_version: '142.0',
       data_collection_permissions: {
         required: ['none'],

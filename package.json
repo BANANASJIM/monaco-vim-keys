@@ -28,7 +28,9 @@
     "test": "npm run test:unit && playwright test",
     "test:unit": "node --test \"tests/unit/**/*.test.mjs\"",
     "test:firefox": "node tests/firefox-e2e.mjs",
-    "lint": "web-ext lint --source-dir dist"
+    "lint": "web-ext lint --source-dir dist",
+    "package": "web-ext build --source-dir dist --artifacts-dir web-ext-artifacts --overwrite-dest",
+    "package:source": "node tools/package-source.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.62.1",

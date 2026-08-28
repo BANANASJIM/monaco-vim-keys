@@ -92,6 +92,19 @@ npm run lint         # web-ext lint on dist/
 npm run probe        # re-run the site probe
 ```
 
+## Release / AMO
+
+Everything needed for an addons.mozilla.org submission lives in `store/`:
+listing copy, privacy policy, reviewer notes, the release checklist, and
+screenshots. Packaging commands:
+
+```sh
+npm run package          # xpi zip -> web-ext-artifacts/
+npm run package:source   # reproducible-build source zip for AMO -> web-ext-artifacts/
+```
+
+See `store/release-checklist.md` for the full runbook.
+
 Test layout:
 
 - `tests/unit/` — registry and settings-resolution unit tests.
