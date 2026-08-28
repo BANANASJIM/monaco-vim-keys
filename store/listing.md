@@ -54,12 +54,13 @@ https://github.com/BANANASJIM/monaco-vim-keys
 
 ## Category
 
-Developer Tools (fallback: Other)
+Web Development (AMO slug: `web-development`). Note: AMO has no
+"Developer Tools" category — this is the closest valid one.
 
 ## Tags
 
-vim, monaco, monaco-editor, leetcode, leetgpu, hackerrank, lintcode,
-keybindings, developer-tools, coding-practice
+None. AMO only allows its fixed allowlist of consumer-oriented tags
+(vim/monaco/etc. are rejected by the API), so the submission omits tags.
 
 ## Version notes (0.1.0)
 

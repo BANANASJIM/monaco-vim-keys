@@ -6,19 +6,7 @@
   "description": {
     "en-US": "Monaco Vim Keys brings NeetCode-style editor settings to the Monaco code editors on popular coding practice sites. It attaches the mature monaco-vim keybinding engine to the editor the site already loads — no remote code, no account, nothing leaves your browser.\n\nFeatures:\n\n- Full vim key bindings (default ON): NORMAL/INSERT/VISUAL modes, motions (hjkl, w/b/e, 0/$, gg/G, counts), operators (d, c, y, x, r), undo/redo, o/O/A, / search, and more.\n- Relative line numbers (default OFF).\n- A subtle floating mode indicator (NORMAL / INSERT / VISUAL) next to the editor.\n- Per-site enable toggles plus global Vim / relative-line-number toggles in the toolbar popup. Settings persist and apply instantly — no page reload.\n\nSupported sites:\n\n- leetgpu.com\n- leetcode.com\n- leetcode.cn\n- www.hackerrank.com\n- www.lintcode.com (caveat: older Monaco without getEditors(); vim attaches when the editor is created or recreated by the page)\n\nNot supported on purpose: neetcode.io and codingame.com already ship native vim support; codewars.com, algoexpert.io, codeforces.com, exercism.org and atcoder.jp do not use the Monaco editor.\n\nUnofficial project — not affiliated with or endorsed by any of the supported sites. Requests no permission besides \"storage\"; runs only on the listed sites.\n\nSource code, build instructions, and issue tracker:\nhttps://github.com/BANANASJIM/monaco-vim-keys"
   },
-  "categories": ["developer-tools"],
-  "tags": [
-    "vim",
-    "monaco",
-    "monaco-editor",
-    "leetcode",
-    "leetgpu",
-    "hackerrank",
-    "lintcode",
-    "keybindings",
-    "developer-tools",
-    "coding-practice"
-  ],
+  "categories": ["web-development"],
   "homepage": { "en-US": "https://github.com/BANANASJIM/monaco-vim-keys" },
   "support_url": { "en-US": "https://github.com/BANANASJIM/monaco-vim-keys/issues" },
   "privacy_policy": {
