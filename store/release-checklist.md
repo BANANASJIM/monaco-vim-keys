@@ -39,7 +39,7 @@ see `store/source-submission.md`.
 2. **Source code**: upload `monaco-vim-keys-<version>-source.zip` when
    prompted (minified/bundled code present: monaco-vim via esbuild).
 3. **Listing fields**: copy from `store/listing.md` — name, summary,
-   description, category (Developer Tools), tags, version notes.
+   description, category (Web Development), version notes.
 4. **Privacy**: paste `store/privacy.md` content where a privacy policy is
    requested. When asked about data collection: answer "collects no data"
    (the manifest declares `data_collection_permissions: required: ["none"]`).

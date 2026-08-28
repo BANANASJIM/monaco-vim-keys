@@ -38,7 +38,17 @@ Verified = a headless runtime probe (`npm run probe`, evidence in
 - `codewars.com`, `algoexpert.io`, `codeforces.com`, `exercism.org`,
   `atcoder.jp` — not Monaco (CodeMirror / Ace).
 
-## Install (from source)
+## Install
+
+**From addons.mozilla.org**: <https://addons.mozilla.org/en-US/firefox/addon/monaco-vim-keys/>
+
+**Signed xpi** (Mozilla-signed, self-distributed): download
+`monaco_vim_keys-0.1.0.1.xpi` from
+[Releases](https://github.com/BANANASJIM/monaco-vim-keys/releases) and open
+it with Firefox, or use `about:addons` → gear icon → *Install Add-on From
+File...*.
+
+**From source:**
 
 ```sh
 npm ci
