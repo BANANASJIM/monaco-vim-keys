@@ -76,11 +76,11 @@ export function configurableSites() {
 }
 
 // Find the registry entry for a hostname, or null if unsupported.
-export function findSite(hostname) {
+export function findSite(hostname, customSites = []) {
   if (!hostname) return null;
   const host = hostname.toLowerCase();
   return (
-    SITES.find((site) =>
+    [...SITES, ...customSites].find((site) =>
       site.hosts.some((h) => host === h || host.endsWith('.' + h))
     ) ?? null
   );

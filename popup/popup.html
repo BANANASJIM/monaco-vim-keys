@@ -6,20 +6,30 @@
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-  <h1>Editor Settings</h1>
-  <label class="row">
-    <input type="checkbox" id="vimEnabled" />
-    <span>Vim key bindings</span>
-  </label>
-  <label class="row">
-    <input type="checkbox" id="relativeLineNumbers" />
-    <span>Relative line numbers</span>
-  </label>
+  <div class="tabs">
+    <button class="tab active" data-tab="settings">Settings</button>
+    <button class="tab" data-tab="sites">Site list</button>
+  </div>
 
-  <h1>Sites</h1>
-  <div id="sites"></div>
+  <section id="tab-settings">
+    <h1>Editor Settings</h1>
+    <label class="row">
+      <input type="checkbox" id="vimEnabled" />
+      <span>Vim key bindings</span>
+    </label>
+    <label class="row">
+      <input type="checkbox" id="relativeLineNumbers" />
+      <span>Relative line numbers</span>
+    </label>
+    <p class="note">Changes apply instantly to open tabs.</p>
+  </section>
 
-  <p class="note">Changes apply instantly to open tabs.</p>
+  <section id="tab-sites" hidden>
+    <button id="addSite" disabled>Add this site</button>
+    <p id="addStatus" class="note"></p>
+    <div id="sites"></div>
+  </section>
+
   <script src="popup.js"></script>
 </body>
 </html>

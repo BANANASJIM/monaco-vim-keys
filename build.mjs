@@ -60,7 +60,8 @@ const manifest = {
   version,
   description:
     'Vim key bindings and relative line numbers for Monaco-editor practice sites (leetgpu, leetcode, hackerrank, ...). Unofficial.',
-  permissions: ['storage'],
+  permissions: ['storage', 'scripting', 'activeTab'],
+  optional_host_permissions: ['https://*/*'],
   browser_specific_settings: {
     gecko: {
       id: 'monaco-vim-keys@bananasjim.github.io',

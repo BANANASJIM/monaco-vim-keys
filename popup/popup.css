@@ -45,3 +45,52 @@ h1:first-child {
   font-size: 11px;
   color: #888;
 }
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 4px 0;
+  background: #222;
+  color: #888;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tab.active {
+  color: #fff;
+  border-color: #4caf50;
+}
+
+#addSite {
+  width: 100%;
+  padding: 6px 0;
+  background: #4caf50;
+  color: #151515;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#addSite:disabled {
+  background: #2a2a2a;
+  color: #666;
+  cursor: default;
+}
+
+.remove {
+  background: none;
+  border: 0;
+  color: #c66;
+  cursor: pointer;
+  font: inherit;
+  padding: 0 2px;
+}

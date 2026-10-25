@@ -33,7 +33,7 @@ function refresh() {
   current = resolveSettings(hostname, stored);
   // The page bundle cannot be un-injected once loaded, so a disabled site is
   // communicated via settings: page.js then disposes vim entirely.
-  if (current.siteEnabled) inject();
+  if (current.siteEnabled && !current.custom) inject();
   postSettings();
 }
 
@@ -43,6 +43,7 @@ async function loadSettings() {
       vimEnabled: DEFAULTS.vimEnabled,
       relativeLineNumbers: DEFAULTS.relativeLineNumbers,
       sites: {},
+      customSites: [],
     });
   } catch (e) {
     stored = { sites: {} };

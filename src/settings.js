@@ -15,7 +15,7 @@ export const DEFAULTS = Object.freeze({
 // Resolve the effective settings for a hostname from raw stored values.
 // Unknown hosts are always disabled (siteEnabled: false).
 export function resolveSettings(hostname, stored = {}) {
-  const site = findSite(hostname);
+  const site = findSite(hostname, stored.customSites);
   let siteEnabled = false;
   if (site) {
     const override = stored.sites?.[site.id]?.enabled;
@@ -24,6 +24,7 @@ export function resolveSettings(hostname, stored = {}) {
   return {
     siteEnabled,
     siteId: site ? site.id : null,
+    custom: !!site?.custom,
     vimEnabled: stored.vimEnabled ?? DEFAULTS.vimEnabled,
     relativeLineNumbers: stored.relativeLineNumbers ?? DEFAULTS.relativeLineNumbers,
   };
